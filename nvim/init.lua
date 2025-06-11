@@ -1,10 +1,3 @@
--- General indentation settings
-vim.opt.tabstop = 2 -- Number of spaces a tab counts for
-vim.opt.shiftwidth = 2 -- Number of spaces for each indentation level
-vim.opt.expandtab = true -- Convert tabs to spaces
-vim.opt.smartindent = true -- Smart auto-indenting
-vim.opt.autoindent = true -- Copy indent from current line
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -70,7 +63,7 @@ vim.o.splitbelow = true
 --  It is very similar to `vim.o` but offers an interface for conveniently interacting with tables.
 --   See `:help lua-options`
 --   and `:help lua-options-guide`
-vim.o.list = true
+vim.o.list = false
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
@@ -733,6 +726,3 @@ require("onedark").setup({
 	style = "warmer",
 })
 require("onedark").load()
-
--- Your existing LSP configuration
-require("core.lsp")
